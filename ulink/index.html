@@ -10,7 +10,10 @@
 
 <body>
     <!-- hello world -->
-    <p style="font-size: 50px;color:green;">我是ulink静态页面==重定向</p>
+    <p style="font-size: 50px;color:green;">我是ulink静态页面---重定向</p>
+    <p id="vvv" style="font-size: 20px;color: green;"></p>
+    
+    <p id="xxx" style="font-size: 20px;color: red;"></p>
     <!-- <div id="xx"></div>
     <a href="https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">开应用</a> -->
 </body>
@@ -28,6 +31,13 @@
 
   
     
+    var pEle = document.getElementById('vvv');
+    var tURL = getParamss('ulink_ref');
+    pEle.innerText = tURL;
+    
+    let newURL = decodeURIComponent(getParamss('ulink_ref')) + '&ulink_back_flg=1'
+    var xEle = document.getElementById('xxx');
+    xEle.innerText = newURL;
 
     setTimeout(function() {
         //window.history.back();
@@ -35,9 +45,7 @@
         //document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
         // document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
 
-       let newURL = decodeURIComponent(getParamss('ulink_ref')) + '&ulink_back_flg=1'
-       document.location.replace(newURL);
-        
+       document.location.replace(newURL);        
     }, 1000);
 
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
