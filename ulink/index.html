@@ -11,6 +11,9 @@
 <body>
     <!-- hello world -->
     <p style="font-size: 50px;color:green;">我是ulink静态页面---重定向</p>
+    
+    <p id="zzz" style="font-size: 20px;color: blue;"></p>
+
     <p id="vvv" style="font-size: 20px;color: green;"></p>
     
     <p id="xxx" style="font-size: 20px;color: red;"></p>
@@ -30,6 +33,8 @@
      };
 
   
+    var zEle = document.getElementById('zzz');
+    zEle.innerText = window.location.href;
     
     var pEle = document.getElementById('vvv');
     var tURL = getParamss('ulink_ref');
@@ -45,7 +50,7 @@
         //document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
         // document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
 
-       document.location.replace(newURL);        
+       //document.location.replace(newURL);        
     }, 1000);
 
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
