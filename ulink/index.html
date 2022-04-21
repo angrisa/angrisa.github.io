@@ -9,18 +9,24 @@
 </head>
 
 <body>
-    hello world
-    <div id="xx"></div>
-    <a href="https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">开应用</a>
-
-
+    <!-- hello world -->
+    <p style="font-size: 50px;">我是ulink静态页面</p>
+    <!-- <div id="xx"></div>
+    <a href="https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">开应用</a> -->
 </body>
 <script>
     // var ref = document.referrer;
+
+    setTimeout(function() {
+       document.location.replace('https://itunes.apple.com/cn/app/id597795676?mt=8');
+    }, 500);
+    
+
     setTimeout(function() {
         //window.history.back();
         //document.location.replace('//angriso.github.io/ulink/');
-          document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
+         // document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
+         document.location.replace( ref+ '&mca_ulink_replace=1');
     }, 1000);
 
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
@@ -28,3 +34,4 @@
 </script>
 
 </html>
+
