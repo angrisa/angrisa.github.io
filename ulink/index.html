@@ -10,7 +10,7 @@
 
 <body>
     <!-- hello world -->
-    <p style="font-size: 50px;color:green;">我是ulink静态页面-重定向</p>
+    <p style="font-size: 50px;color:green;">我是ulink静态页面～重定向</p>
     <!-- <div id="xx"></div>
     <a href="https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf" id="open">开应用</a> -->
 </body>
@@ -27,7 +27,12 @@
         //document.location.replace('//angriso.github.io/ulink/');
          // document.location.replace('//mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf');
          var ref = document.referrer;
-         document.location.replace( ref+ '&mca_ulink_replace=1');
+         var tURL = window.location.href;
+        if(tURL.indexOf("?") != -1){
+            document.location.replace( ref+ '&mca_ulink_replace=1');
+        }else{
+            document.location.replace( ref+ '?mca_ulink_replace=1');
+        }
     }, 1000);
 
     //document.location = 'https://mca.cmpay.com/hebaoul/openurl/haha/hehe?SORCNL=863&MERCSIGN=okB54CEbp0DT6C4MEGxBrsrDERjOMTrf';
